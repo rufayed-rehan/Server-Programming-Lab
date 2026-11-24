@@ -1,0 +1,177 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Islamic University of Technology (IUT) Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (13/11/23)
+%
+% This template has been modified from:
+% https://www.overleaf.com/latex/templates/uppsala-university-template/jvjprsfnzgbj
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+% Modified by Ishmam Tashdeed to fit IUT
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{listings}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Islamic University of Technology}\\[1.5cm] % Name of your university/college
+\includegraphics[scale=0.35]{iut_logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+\textsc{\Large COURSE NAME}\\[0.5cm] % Major heading such as course name
+\textsc{\large COURSE CODE}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries REPORT TITLE}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+    \begin{centering} \large
+        \emph{Author:}\\
+        FIRST AUTHOR\\ % Your name
+        SECOND AUTHOR\\
+        THIRD AUTHOR\\
+    \end{centering}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	  CONTENT (REPLACE WITH YOUR OWN CONTENT)
+%----------------------------------------------------------------------------------------
+\section{Section 1}
+    \lipsum[1-2]
+
+\section{Section 2}
+    \lipsum[2]
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{example-image-a}
+        \caption{This is a dummy image.}
+        \label{fig:img1}
+    \end{figure}
+
+    \lipsum[3]
+
+\section{Section 3}
+    \lipsum[4]
+    
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{cccc}
+            \hline
+            No. & Lorem & Ipsum        & Dolor  \\ \hline
+            1   & Lorem & Sit          & 12.3   \\
+            2   & Ipsum & Amet         & 3.1415 \\
+            3   & Dolor & Consectetuer & 0.45   \\ \hline
+        \end{tabular}
+        \caption{This is a dummy table.}
+        \label{tab:tab1}
+    \end{table}
+
+    \lipsum[3]
+
+\section{Section 4}
+    \lipsum[2]
+
+    \begin{align}
+        E = mc^2\label{eqn:formulae}
+    \end{align}
+
+    \lipsum[3]
+
+\section{Section 5}
+    \lipsum[4]
+    
+    \begin{lstlisting}[caption=Code snippet in \LaTeX{} Document]
+print("Hello, World!")
+print("Any snippet of code")\end{lstlisting}
+
+    \lipsum[5]
+
+\section{Section 6}
+    This is a dummy citation \cite{knuth1984}. This will show up in the \textbf{References} section. Add references to \texttt{refs.bib} file.
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+\end{document}
